@@ -20,7 +20,7 @@
     - httpd
     - httpd-devel
     - httpd-tools
-    notify: Restart HTTPD
+    notify: restart apache
 
   - name: install postgresql packages
     yum:  name={{ item }} state=present
@@ -29,5 +29,5 @@
     - postgresql-libs
 
   handlers:
-  - name: Restart HTTPD
+  - name: restart apache
     service: name=httpd state=restarted
