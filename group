@@ -1,0 +1,12 @@
+# tasks file for groups
+- hosts: localhost,dbservers
+  become: yes
+  remote_user: ansible
+  become_method: sudo
+  connection: ssh
+  gather_facts: no
+  tasks:
+  - group:
+    name: dba
+    gid: 501
+    state: present
