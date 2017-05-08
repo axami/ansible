@@ -27,7 +27,13 @@
     with_items:
     - postgresql
     - postgresql-libs
+    
+  - name: install git packages
+    yum:  name={{ item }} state=present
+    with_items:
+    - git
+    - perl-Git
 
   handlers:
   - name: restart apache
-    service: name=httpd state=restarted
+    service: name=httpd state=started
