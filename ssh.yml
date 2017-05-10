@@ -1,3 +1,4 @@
+---
 # Set SSH key from file
 - hosts: dbservers
   become: yes
