@@ -1,9 +1,9 @@
 ---
 # install base packages
-# poc version: 0.1b
-# date: 27/04/2017
+# poc version: 0.1c
+# date: 31/05/2017
 
-- hosts: dbservers, localhost
+- hosts: all
   become: yes
   remote_user: ansible
   become_method: sudo
