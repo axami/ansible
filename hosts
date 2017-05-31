@@ -1,0 +1,14 @@
+[local]
+localhost ansible_ssh_port=22
+
+[dbservers]
+10.24.130.109
+
+[devservers]
+10.24.130.198
+
+[etlservers]
+10.24.130.120
+
+## [webservers]
+##
